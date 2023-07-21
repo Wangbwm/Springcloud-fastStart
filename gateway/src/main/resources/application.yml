@@ -1,0 +1,41 @@
+server:
+  port: 10010
+
+logging:
+  level:
+    com.morewen: debug
+  pattern:
+    dateformat: MM-dd HH:mm:ss:SSS
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.198.100:8848
+    gateway:
+      globalcors:
+        cors-configurations:
+          # 全局允许访问
+          '[/**]':
+            allow-credentials: true
+            allowed-origins:
+              - "*" # 允许来自网关的跨域请求
+            allowed-headers: "*"
+            allowed-methods:
+              - OPTIONS
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            maxAge: 360000
+      routes:
+        - id: test-service
+          uri: lb://testService
+          predicates:
+            - Path=/test/**
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
