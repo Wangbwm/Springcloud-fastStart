@@ -1,0 +1,34 @@
+server:
+  port: 8080
+spring:
+  devtools:
+    restart:
+      enabled: true
+  application:
+    name: morewen-test
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.198.100:8848
+        cluster-name: WH
+    loadbalancer:
+      ribbon:
+        enabled: false
+# feign 配置
+feign:
+  sentinel:
+    enabled: false
+  okhttp:
+    enabled: true
+  httpclient:
+    enabled: false
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
