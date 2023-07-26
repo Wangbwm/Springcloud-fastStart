@@ -10,7 +10,7 @@ import org.springframework.http.server.reactive.ServerHttpResponse;
 import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-import com.morewen.projectcommon.utils.ServletUtils;
+import com.morewen.common.core.utils.ServletUtils;
 
 /**
  * 网关统一异常处理

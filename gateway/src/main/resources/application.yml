@@ -31,10 +31,13 @@ spring:
               - DELETE
             maxAge: 360000
       routes:
-        - id: test-service
-          uri: lb://testService
+        - id: morewen-test
+          uri: lb://morewen-test
           predicates:
             - Path=/test/**
+    loadbalancer:
+      ribbon:
+        enabled: false
 
 mybatis-plus:
   configuration:

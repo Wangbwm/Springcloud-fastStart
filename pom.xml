@@ -12,6 +12,7 @@
         <module>project-api</module>
         <module>project-common</module>
         <module>gateway</module>
+        <module>project-models</module>
     </modules>
     <properties>
         <!--指定Java版本-->

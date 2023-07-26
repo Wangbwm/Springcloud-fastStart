@@ -9,7 +9,6 @@
     </parent>
     <modules>
         <module>project-common-core</module>
-        <module>project-common-security</module>
     </modules>
     <packaging>pom</packaging>
     <artifactId>project-common</artifactId>
