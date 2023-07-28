@@ -24,6 +24,8 @@
         <spring-boot.version>2.3.9.RELEASE</spring-boot.version>
         <mysql.version>5.1.47</mysql.version>
         <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <druid.version>1.2.16</druid.version>
+        <dynamic-ds.version>3.5.2</dynamic-ds.version>
     </properties>
     <dependencies>
         <dependency>
